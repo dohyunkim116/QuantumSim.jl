@@ -1,13 +1,17 @@
 name = "QuantumSim"
-uuid = "74eec597-a4c4-4c76-8597-b67ed0a1419a"
+uuid = "281df352-8c17-4805-9961-d9a149125cad"
 authors = ["Dohyun Kim"]
 version = "1.0.0-DEV"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [compat]
 julia = "1.6.7"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 
 [targets]
-test = ["Test"]
+test = ["Test", "PyCall"]

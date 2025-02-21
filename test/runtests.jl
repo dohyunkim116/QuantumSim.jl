@@ -1,6 +1,6 @@
 using QuantumSim
 using Test
-
-@testset "QuantumSim.jl" begin
-    # Write your tests here.
-end
+using PyCall
+include("test_gates.jl")
+include("test_normalization.jl")
+include("test_compare_to_cirq.jl")

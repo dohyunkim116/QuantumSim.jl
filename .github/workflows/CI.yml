@@ -37,5 +37,18 @@ jobs:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
       - uses: julia-actions/cache@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: |
+          pip install cirq
+          pip install ply
+      - name: Set PYTHON environment variable for PyCall
+        run: echo "PYTHON=$(which python)" >> $GITHUB_ENV
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-runtest@v1
+      - name: Install dependencies
+        run: |
+          julia -e 'using Pkg; Pkg.instantiate()'

@@ -1,1 +1,17 @@
 /Manifest.toml
+.vscode
+
+# Julia specific
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
+/docs/build/
+/docs/site/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.swp
