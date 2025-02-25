@@ -1,10 +1,10 @@
-# quantumSim
+# QuantumSim
 
-[![Build Status](https://github.com/dohyunkim116/quantumSim.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/dohyunkim116/quantumSim.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Build Status](https://github.com/dohyunkim116/QuantumSim.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/dohyunkim116/QuantumSim.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 ## Overview
 
-`quantumSim` is a Julia package for simulating quantum circuits for a subset of QASM (Quantum Assembly Language) programs. The package supports various quantum gates and allows for comparison with Cirq simulations for programs in the `test/qasm` directory. The supported gates include: H, X, T, T†, and CX.
+`QuantumSim` is a Julia package for simulating quantum circuits for a subset of QASM (Quantum Assembly Language) programs. The package supports various quantum gates and allows for comparison with Cirq simulations for programs in the `test/qasm` directory. The supported gates include: H, X, T, T†, and CX.
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ Ensure you have Julia version 1.9 installed on your system. You can download it 
 To install the package, clone the repository and add it to your Julia environment:
 
 ```sh
-git clone https://github.com/dohyunkim116/quantumSim.jl
-cd quantumSim.jl
+git clone https://github.com/dohyunkim116/QuantumSim.jl
+cd QuantumSim.jl
 julia -e 'using Pkg; Pkg.add(PackageSpec(path=pwd()))'
 ```
 
@@ -31,7 +31,7 @@ The input to the simulator is a QASM file. QASM files describe quantum circuits 
 Here is an example of how to run a quantum circuit using one of the QASM files in the `test/qasm` directory, and how to access the final state of the quantum circuit:
 
 ```julia
-using quantumSim
+using QuantumSim
 
 qasm_dir = "test/qasm" # assuming your current working directory is the root of the package
 qasm_files = readdir(qasm_dir)
@@ -52,7 +52,7 @@ qasm_dir = "qasm"
 end
 ```
 
-This will print whether each QASM file passes or fails the approximate equality test against the outputs of Cirq. Alternatively, if you have navigated to the `quantumSim.jl` folder, you can activate the package environment in the Julia REPL by typing `] activate .` and run all of the tests defined in `runtests.jl` by typing `test`. The `runtests.jl` file includes tests for comparing the simulation results with Cirq.
+This will print whether each QASM file passes or fails the approximate equality test against the outputs of Cirq. Alternatively, if you have navigated to the `QuantumSim.jl` folder, you can activate the package environment in the Julia REPL by typing `] activate .` and run all of the tests defined in `runtests.jl` by typing `test`. The `runtests.jl` file includes tests for comparing the simulation results with Cirq.
 
 ## Documentation
 
